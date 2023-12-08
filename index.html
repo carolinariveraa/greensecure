@@ -10,50 +10,24 @@
   <style>
     body, h1, h2, h3, h4, h5, h6 {font-family: "Montserrat", sans-serif; color: black;}
     .w3-row-padding img {margin-bottom: 12px}
-    /* Set the width of the sidebar to 120px */
-    .w3-sidebar {width: 120px;background: #fff;}
-    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-    #main {margin-left: 120px; background-color: #fff;}
-    /* Remove margins from "page content" on small screens */
-    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+    #main {background-color: #fff;}
     .w3-bar-item {color: black;}
     .w3-bar-item:hover {color: black;}
-    /* Background for Company Section */
-    #company-login {background-color: #fff;}
+    .user-icon {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 36px;
+    }
   </style>
 </head>
 <body class="w3-white">
 
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <!-- Avatar image in top left corner -->
-  <img src="pics/club.jpg" style="width:100%">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">
-    <i class="fa fa-building w3-xxlarge"></i>
-    <p>SECURITY AND MONITORING</p>
+<!-- User Icon -->
+<div class="user-icon">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">
+    <i class="fa fa-user-circle-o"></i>
   </a>
-  <a href="#occupancy" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-wrench w3-xxlarge"></i>
-    <p>OCCUPANCY ANALYTICS</p>
-  </a>
-  <a href="#reporting" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-bar-chart w3-xxlarge"></i>
-    <p>ANALYSIS AND REPORTING</p>
-  </a>
-  <a href="#customer" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-users w3-xxlarge"></i>
-    <p>CUSTOMER EXPERIENCE</p>
-  </a>
-</nav>
-
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-white w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">SECURITY AND MONITORING</a>
-    <a href="#occupancy" class="w3-bar-item w3-button" style="width:25% !important">OCCUPANCY ANALYTICS</a>
-    <a href="#reporting" class="w3-bar-item w3-button" style="width:25% !important">ANALYSIS AND REPORTING</a>
-    <a href="#customer" class="w3-bar-item w3-button" style="width:25% !important">CUSTOMER EXPERIENCE</a>
-  </div>
 </div>
 
 <!-- Page Content -->
