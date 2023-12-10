@@ -41,9 +41,33 @@
 
 <!-- Security and Monitoring Information Section -->
 <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="general-overview">
-  <h2>Security and Monitoring Information</h2>
-  <p>Stay informed about the security status of the club facilities with real-time monitoring. Our comprehensive security measures ensure a safe environment for all members.</p>
-  <p>Receive immediate alerts and updates regarding any security events or anomalies detected within our premises. We prioritize your safety and promptness in addressing any potential issues.</p>
+  <h2>Occupancy Monitoring Information</h2>
+  <p>Stay informed about the occupancy status of different club facilities with real-time monitoring.</p>
+  <p>Click on the buttons below to view the occupancy charts:</p>
+
+  <!-- Botones para cada actividad -->
+  <button onclick="showGraph('golf_course')">Golf Course</button>
+  <button onclick="showGraph('event_room')">Event Room</button>
+  <button onclick="showGraph('swimming_pool')">Swimming Pool</button>
+  <button onclick="showGraph('gym')">Gym</button>
+  <button onclick="showGraph('restaurant')">Restaurant</button>
+  <button onclick="showGraph('tennis_court')">Tennis Court</button>
+  <button onclick="showGraph('spa')">Spa</button>
+  <button onclick="showGraph('conference_room')">Conference Room</button>
+  <button onclick="showGraph('bar')">Bar</button>
+  <button onclick="showGraph('running_track')">Running Track</button>
+
+  <!-- Contenedor para los gráficos -->
+  <div id="graph-container"></div>
+
+  <!-- Script para mostrar los gráficos -->
+  <script>
+    function showGraph(activity) {
+      var graphContainer = document.getElementById('graph-container');
+      graphContainer.innerHTML = `<iframe src="${activity}_occupancy.html" style="width: 100%; height: 500px;"></iframe>`;
+    }
+  </script>
+</div>
 
   
   <!-- FACILITY AND RESOURCE MANAGEMENT -->
@@ -56,7 +80,6 @@
     <iframe src="act_occ_date.html" height="600" width="100%" frameborder="0"></iframe>
     <iframe src="activity_distribution.html" height="600" width="100%" frameborder="0"></iframe>
     <iframe src="facility_occupancy.html" height="600" width="100%" frameborder="0"></iframe>
-    <iframe src="total_capacity.html" height="600" width="100%" frameborder="0"></iframe>
 
   </div>
 
