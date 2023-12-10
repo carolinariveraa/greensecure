@@ -43,31 +43,36 @@
 <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="general-overview">
   <h2>Occupancy Monitoring Information</h2>
   <p>Stay informed about the occupancy status of different club facilities with real-time monitoring.</p>
-  <p>Click on the buttons below to view the occupancy charts:</p>
+  <p>Select an activity from the list below to view the occupancy chart:</p>
 
-  <!-- Botones para cada actividad -->
-  <button onclick="showGraph('golf_course')">Golf Course</button>
-  <button onclick="showGraph('event_room')">Event Room</button>
-  <button onclick="showGraph('swimming_pool')">Swimming Pool</button>
-  <button onclick="showGraph('gym')">Gym</button>
-  <button onclick="showGraph('restaurant')">Restaurant</button>
-  <button onclick="showGraph('tennis_court')">Tennis Court</button>
-  <button onclick="showGraph('spa')">Spa</button>
-  <button onclick="showGraph('conference_room')">Conference Room</button>
-  <button onclick="showGraph('bar')">Bar</button>
-  <button onclick="showGraph('running_track')">Running Track</button>
+  <!-- Menú desplegable con actividades -->
+  <select id="activity-selector" onchange="showGraph()">
+    <option value="golf_course">Golf Course</option>
+    <option value="event_room">Event Room</option>
+    <option value="swimming_pool">Swimming Pool</option>
+    <option value="gym">Gym</option>
+    <option value="restaurant">Restaurant</option>
+    <option value="tennis_court">Tennis Court</option>
+    <option value="spa">Spa</option>
+    <option value="conference_room">Conference Room</option>
+    <option value="bar">Bar</option>
+    <option value="running_track">Running Track</option>
+    <!-- Agrega más opciones para cada actividad aquí -->
+  </select>
 
   <!-- Contenedor para los gráficos -->
   <div id="graph-container"></div>
 
   <!-- Script para mostrar los gráficos -->
   <script>
-    function showGraph(activity) {
+    function showGraph() {
+      var activity = document.getElementById('activity-selector').value;
       var graphContainer = document.getElementById('graph-container');
       graphContainer.innerHTML = `<iframe src="${activity}_occupancy.html" style="width: 100%; height: 500px;"></iframe>`;
     }
   </script>
 </div>
+
 
   
   <!-- FACILITY AND RESOURCE MANAGEMENT -->
