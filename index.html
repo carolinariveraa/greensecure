@@ -19,6 +19,9 @@
       right: 20px;
       font-size: 36px;
     }
+    .graph-container {
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body class="w3-white">
@@ -36,76 +39,60 @@
   <header class="w3-container w3-padding-32 w3-center w3-white" id="company">
     <h1 class="w3-jumbo"><span class="w3-hide-small"></span> GREEN SECURE</h1>
     <p>Solutions for Social Clubs</p>
-    <img src="pics/club.jpg" alt="boy" class="w3-image" width="992" height="1108">
   </header>
 
-<!-- Security and Monitoring Information Section -->
-<div class="w3-content w3-justify w3-text-grey w3-padding-64" id="general-overview">
-  <h2>Occupancy Monitoring Information</h2>
-  <p>Stay informed about the occupancy status of different club facilities with real-time monitoring.</p>
-  <p>Select an activity from the list below to view the occupancy chart:</p>
+  <!-- Security and Monitoring Information Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="general-overview">
+    <h2>Golf Course</h2>
+    <div class="graph-container">
+      <img src="golf_course_occupancy.html" alt="Golf Course Occupancy Graph">
+    </div>
 
-  <!-- Menú desplegable con actividades -->
-  <select id="activity-selector" onchange="showGraph()">
-    <option value="golf_course">Golf Course</option>
-    <option value="event_room">Event Room</option>
-    <option value="swimming_pool">Swimming Pool</option>
-    <option value="gym">Gym</option>
-    <option value="restaurant">Restaurant</option>
-    <option value="tennis_court">Tennis Court</option>
-    <option value="spa">Spa</option>
-    <option value="conference_room">Conference Room</option>
-    <option value="bar">Bar</option>
-    <option value="running_track">Running Track</option>
-    <!-- Agrega más opciones para cada actividad aquí -->
-  </select>
+    <h2>Event Room</h2>
+    <div class="graph-container">
+      <img src="event_room_occupancy.html" alt="Event Room Occupancy Graph">
+    </div>
 
-  <!-- Contenedor para los gráficos -->
-  <div id="graph-container"></div>
+    <h2>Swimming Pool</h2>
+    <div class="graph-container">
+      <img src="swimming_pool_occupancy.html" alt="Swimming Pool Occupancy Graph">
+    </div>
 
-  <!-- Script para mostrar los gráficos -->
-  <script>
-    function showGraph() {
-      var activity = document.getElementById('activity-selector').value;
-      var graphContainer = document.getElementById('graph-container');
-      graphContainer.innerHTML = `<iframe src="${activity}_occupancy.html" style="width: 100%; height: 500px;"></iframe>`;
-    }
-  </script>
-</div>
+    <h2>Gym</h2>
+    <div class="graph-container">
+      <img src="gym_occupancy.html" alt="Gym Occupancy Graph">
+    </div>
 
+    <h2>Restaurant</h2>
+    <div class="graph-container">
+      <img src="restaurant_occupancy.html" alt="Restaurant Occupancy Graph">
+    </div>
 
-  
-  <!-- FACILITY AND RESOURCE MANAGEMENT -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="churn-analysis">
-    <h2>Occupancy Analytics</h2>
-    <p>Explore the occupancy levels across various club activities. Our analytics provide a detailed insight into the utilization of facilities and spaces. By examining the occupancy trends, you can optimize scheduling and resource allocation for a more efficient and satisfying member experience.</p>
-    <p>Understanding the occupancy patterns empowers you to make informed decisions. By identifying peak times and underutilized periods, you can better manage activities, enhancing the overall club experience. Discover the occupancy analytics for smarter planning and improved service delivery.</p>
-  
-    <!-- Contenido de la Sección de Administración de Instalaciones -->
-    <iframe src="act_occ_date.html" height="600" width="100%" frameborder="0"></iframe>
-    <iframe src="activity_distribution.html" height="600" width="100%" frameborder="0"></iframe>
-    <iframe src="facility_occupancy.html" height="600" width="100%" frameborder="0"></iframe>
+    <h2>Tennis Court</h2>
+    <div class="graph-container">
+      <img src="tennis_court_occupancy.html" alt="Tennis Court Occupancy Graph">
+    </div>
 
-  </div>
+    <h2>Spa</h2>
+    <div class="graph-container">
+      <img src="spa_occupancy.html" alt="Spa Occupancy Graph">
+    </div>
 
-  <!-- ANALYSIS AND REPORTING -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="reporting">
-    <h2>Analysis and Reporting</h2>
-    <p>Unlock actionable insights from your club's reservation data. Dive into a comprehensive analysis of confirmed reservations by day and facility type, empowering better decision-making for resource allocation and member engagement.</p>
-    <p>Additionally, explore the distribution of reservations categorized as pending, confirmed, and canceled. Understanding these patterns enables proactive measures to streamline services and enhance member satisfaction.</p>  
-    <!-- Contenido de la Sección de Análisis e Informes -->
-    <iframe src="confirmed_reservations.html" height="600" width="100%" frameborder="0"></iframe>
-    <iframe src="reservation_status_distribution.html" height="600" width="100%" frameborder="0"></iframe>
+    <h2>Conference Room</h2>
+    <div class="graph-container">
+      <img src="conference_room_occupancy.html" alt="Conference Room Occupancy Graph">
+    </div>
 
-  </div>
+    <h2>Bar</h2>
+    <div class="graph-container">
+      <img src="bar_occupancy.html" alt="Bar Occupancy Graph">
+    </div>
 
-  <!-- CUSTOMER EXPERIENCE -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="customer">
-    <h2>Customer Data</h2>
-    <p>Explore insights into your member base. Get a detailed view of your club's members, including their names, contact information, and registration dates. Understanding your member demographics is crucial for personalized services and fostering lasting relationships.</p>
-    <!-- Contenido de la Sección de Experiencia del Cliente -->
-    <iframe src="members_table.html" height="600" width="100%" frameborder="0"></iframe>
-
+    <h2>Running Track</h2>
+    <div class="graph-container">
+      <img src="running_track_occupancy.html" alt="Running Track Occupancy Graph">
+    </div>
+    <!-- Agrega más actividades aquí -->
   </div>
 
   <!-- Footer -->
@@ -120,7 +107,7 @@
     <a class="w3-button w3-round-xxlarge w3-small w3-light-grey" href="https://www.w3schools.com/spaces" target="_blank">Start now</a> 
     <!-- End footer -->
   </footer>
-<!-- END PAGE CONTENT -->
+  <!-- END PAGE CONTENT -->
 </div>
 
 </body>
