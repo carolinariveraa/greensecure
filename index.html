@@ -22,9 +22,47 @@
     .graph-container {
       margin-top: 20px;
     }
+    .sidebar {
+      height: 100%;
+      width: 200px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+    .sidebar a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #818181;
+      display: block;
+    }
+    .sidebar a:hover {
+      color: #f1f1f1;
+    }
   </style>
 </head>
 <body class="w3-white">
+
+<!-- Side Navigation -->
+<div class="sidebar">
+  <a href="#general-overview">Overall</a>
+  <a href="#golf_course">Golf Course</a>
+  <a href="#event_room">Event Room</a>
+  <a href="#swimming_pool">Swimming Pool</a>
+  <a href="#gym">Gym</a>
+  <a href="#restaurant">Restaurant</a>
+  <a href="#tennis_court">Tennis Court</a>
+  <a href="#spa">Spa</a>
+  <a href="#conference_room">Conference Room</a>
+  <a href="#bar">Bar</a>
+  <a href="#running_track">Running Track</a>
+
+</div>
+
 
 <!-- User Icon -->
 <div class="user-icon">
@@ -40,112 +78,141 @@
     <h1 class="w3-jumbo"><span class="w3-hide-small"></span> GREEN SECURE</h1>
     <p>Solutions for Social Clubs</p>
   </header>
-
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="general-overview">
-    <h2>Overall Occupancy</h2>
-    <div class="graph-container">
-      <table>
-        <tr>
-          <th>Activity</th>
-          <th>Current Occupancy</th>
-        </tr>
-        <tr>
-          <td>Golf Course</td>
-          <td>32</td>
-        </tr>
-        <tr>
-          <td>Event Room</td>
-          <td>45</td>
-        </tr>
-        <tr>
-          <td>Swimming Pool</td>
-          <td>22</td>
-        </tr>
-        <tr>
-          <td>Gym</td>
-          <td>60</td>
-        </tr>
-        <tr>
-          <td>Restaurant</td>
-          <td>28</td>
-        </tr>
-        <tr>
-          <td>Tennis Court</td>
-          <td>18</td>
-        </tr>
-        <tr>
-          <td>Spa</td>
-          <td>38</td>
-        </tr>
-        <tr>
-          <td>Conference Room</td>
-          <td>12</td>
-        </tr>
-        <tr>
-          <td>Bar</td>
-          <td>50</td>
-        </tr>
-        <tr>
-          <td>Running Track</td>
-          <td>15</td>
-        </tr>
-      </table>
+  
+    <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="general-overview">
+      <h2 style="display: inline-block; margin-right: 20%;">Overall Occupancy</h2>
+      <div class="graph-container" style="display: inline-block; width: 60%;">
+        <table style="width:100%; font-size: 18px;">
+          <tr>
+            <th>Activity</th>
+            <th>Current Occupancy</th>
+          </tr>
+          <tr>
+            <td>Golf Course</td>
+            <td>32</td>
+          </tr>
+          <tr>
+            <td>Event Room</td>
+            <td>45</td>
+          </tr>
+          <tr>
+            <td>Swimming Pool</td>
+            <td>22</td>
+          </tr>
+          <tr>
+            <td>Gym</td>
+            <td>60</td>
+          </tr>
+          <tr>
+            <td>Restaurant</td>
+            <td>28</td>
+          </tr>
+          <tr>
+            <td>Tennis Court</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>Spa</td>
+            <td>38</td>
+          </tr>
+          <tr>
+            <td>Conference Room</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>Bar</td>
+            <td>50</td>
+          </tr>
+          <tr>
+            <td>Running Track</td>
+            <td>15</td>
+          </tr>
+          <!-- Agrega el resto de filas -->
+        </table>
+      </div>
     </div>
+    
 
-<!-- Security and Monitoring Information Section -->
-<div class="w3-content w3-justify w3-text-grey w3-padding-64" id="general-overview">
-  <h2>Golf Course</h2>
-  <div class="graph-container">
-    <iframe src="golf_course_occupancy.html" style="width:100%; height:500px;"></iframe>
-  </div>
-
-  <h2>Event Room</h2>
-  <div class="graph-container">
-    <iframe src="event_room_occupancy.html" style="width:100%; height:500px;"></iframe>
-  </div>
-
-  <h2>Swimming Pool</h2>
-  <div class="graph-container">
-    <iframe src="swimming_pool_occupancy.html" style="width:100%; height:500px;"></iframe>
-  </div>
-
-  <h2>Gym</h2>
-  <div class="graph-container">
-    <iframe src="gym_occupancy.html" style="width:100%; height:500px;"></iframe>
-  </div>
-
-  <h2>Restaurant</h2>
-  <div class="graph-container">
-    <iframe src="restaurant_occupancy.html" style="width:100%; height:500px;"></iframe>
-  </div>
-
-  <h2>Tennis Court</h2>
-  <div class="graph-container">
-    <iframe src="tennis_court_occupancy.html" style="width:100%; height:500px;"></iframe>
-  </div>
-
-  <h2>Spa</h2>
-  <div class="graph-container">
-    <iframe src="spa_occupancy.html" style="width:100%; height:500px;"></iframe>
-  </div>
-
-  <h2>Conference Room</h2>
-  <div class="graph-container">
-    <iframe src="conference_room_occupancy.html" style="width:100%; height:500px;"></iframe>
-  </div>
-
-  <h2>Bar</h2>
-  <div class="graph-container">
-    <iframe src="bar_occupancy.html" style="width:100%; height:500px;"></iframe>
-  </div>
-
-  <h2>Running Track</h2>
-  <div class="graph-container">
-    <iframe src="running_track_occupancy.html" style="width:100%; height:500px;"></iframe>
-  </div>
-
-  <!-- Repite esta estructura para todas las actividades -->
-</div>
+    <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="golf_course">
+      <!-- Contenido del Golf Course -->
+      <h2>Golf Course</h2>
+      <div class="graph-container">
+        <iframe src="golf_course_occupancy.html" style="width:100%; height:500px;"></iframe>
+      </div>
+    </div>
+    
+    <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="event_room">
+      <!-- Contenido del Event Room -->
+      <h2>Event Room</h2>
+      <div class="graph-container">
+        <iframe src="event_room_occupancy.html" style="width:100%; height:500px;"></iframe>
+      </div>
+    </div>
+    
+    <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="swimming_pool">
+      <!-- Contenido del Swimming Pool -->
+      <h2>Swimming Pool</h2>
+      <div class="graph-container">
+        <iframe src="swimming_pool_occupancy.html" style="width:100%; height:500px;"></iframe>
+      </div>
+    </div>
+    
+    <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="gym">
+      <!-- Contenido del Gym -->
+      <h2>Gym</h2>
+      <div class="graph-container">
+        <iframe src="gym_occupancy.html" style="width:100%; height:500px;"></iframe>
+      </div>
+    </div>
+    
+    <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="restaurant">
+      <!-- Contenido del Restaurant -->
+      <h2>Restaurant</h2>
+      <div class="graph-container">
+        <iframe src="restaurant_occupancy.html" style="width:100%; height:500px;"></iframe>
+      </div>
+    </div>
+    
+    <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="tennis_court">
+      <!-- Contenido del Tennis Court -->
+      <h2>Tennis Court</h2>
+      <div class="graph-container">
+        <iframe src="tennis_court_occupancy.html" style="width:100%; height:500px;"></iframe>
+      </div>
+    </div>
+    
+    <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="spa">
+      <!-- Contenido del Spa -->
+      <h2>Spa</h2>
+      <div class="graph-container">
+        <iframe src="spa_occupancy.html" style="width:100%; height:500px;"></iframe>
+      </div>
+    </div>
+    
+    <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="conference_room">
+      <!-- Contenido del Conference Room -->
+      <h2>Conference Room</h2>
+      <div class="graph-container">
+        <iframe src="conference_room_occupancy.html" style="width:100%; height:500px;"></iframe>
+      </div>
+    </div>
+    
+    <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="bar">
+      <!-- Contenido del Bar -->
+      <h2>Bar</h2>
+      <div class="graph-container">
+        <iframe src="bar_occupancy.html" style="width:100%; height:500px;"></iframe>
+      </div>
+    </div>
+    
+    <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="running_track">
+      <!-- Contenido del Running Track -->
+      <h2>Running Track</h2>
+      <div class="graph-container">
+        <iframe src="running_track_occupancy.html" style="width:100%; height:500px;"></iframe>
+      </div>
+    </div>
+    
 
 
   <!-- Footer -->
